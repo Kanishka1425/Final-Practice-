@@ -10,7 +10,7 @@ on:
       required: true
 
       jobs:
-      greet:
+       greet:
 
       runs-on: ubuntu-latest
       steps:
