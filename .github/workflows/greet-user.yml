@@ -1,4 +1,4 @@
-name: Printing the output 
+name: Greet User 
 on: 
   workflow_dispatch:
     inputs:
