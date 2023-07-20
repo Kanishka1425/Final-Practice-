@@ -1,20 +1,19 @@
 name: Printing the output 
 on: 
   workflow_dispatch:
-      inputs:
-        name:
+    inputs:
+      name:
         description: 'Person to greet '
         default: 'kanishka'
         type: string
-          
-      required: true
+        required: true
 
-      jobs:   
-        Send greeting:
-          runs-on: ubuntu-latest
-          steps:
-           - name: Send greeting
-             run: echo "Hello ${{ inputs.name}}"
+jobs:
+  send_greeting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: send greeting
+        run: echo "Hello ${{ inputs.name}}"
 
             
 
