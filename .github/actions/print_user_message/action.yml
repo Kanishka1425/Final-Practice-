@@ -1,0 +1,12 @@
+name: print_user_message
+description: print_user_message
+inputs:
+  user_message:
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: print_user_message
+      run: echo ${{ inputs.user_message }}
+      shell: bash
