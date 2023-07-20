@@ -3,19 +3,18 @@ on:
   workflow_dispatch:
       inputs:
         name:
-      description: 'person to greet '
-
-      default: 'kanishka'
+        description: 'Person to greet '
+        default: 'kanishka'
+        type: string
           
       required: true
 
       jobs:   
-        build:
-
+        Send greeting:
           runs-on: ubuntu-latest
           steps:
-           - name: send greeting
-             run: echo "Hello ${{github.events.input.name}}"
+           - name: Send greeting
+             run: echo "Hello ${{ inputs.name}}"
 
             
 
