@@ -1,0 +1,17 @@
+name: Print User Message
+
+on:
+  workflow_dispatch:
+    inputs:
+      user_message:
+        description: "Enter the message to be printed"
+        required: true
+        type: string
+jobs:
+    print_user_message:
+      runs-on: ubuntu-latest
+      steps:
+      - name: print_user_message
+        uses: Kanishka1425/Final-Practice-/.github/actions/print_user_message@main
+        with:
+          messsage: ${{ inputs.user_message }}
